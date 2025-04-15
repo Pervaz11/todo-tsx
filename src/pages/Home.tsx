@@ -4,6 +4,8 @@ import { deleteTodo, toggleTodo } from "../features/todos/todosSlice";
 import { Todo } from "../types/todo.types";
 import { useState } from "react";
 import TodoCard from "../components/TodoCard";
+import "./Home.css"
+
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
