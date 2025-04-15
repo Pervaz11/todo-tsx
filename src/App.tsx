@@ -1,19 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import { routes } from './routes';
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
+import Navbar from "./components/Navbar";
 
-const App: React.FC = () => {
+function App() {
+  const routing = useRoutes(routes);
+
   return (
-    <Router>
+    <div className="min-h-screen bg-gray-100 text-gray-900">
       <Navbar />
-      <Routes>
-        {routes.map((route, idx) => (
-          <Route key={idx} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </Router>
+      <div className="container mx-auto p-4">
+        {routing}
+      </div>
+    </div>
   );
-};
+}
 
 export default App;
+

@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             <Link to="/pending">Pending</Link>
           </li>
           <li>
-            <Link to="/add-todo">Add Todo</Link>
+            <Link to="/add">Add Todo</Link>
           </li>
         </ul>
       </div>
